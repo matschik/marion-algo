@@ -1,2 +1,2 @@
-var path = require("path");
+let path = require("path");
 console.log(path.basename(__filename));

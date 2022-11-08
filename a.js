@@ -1,14 +1,16 @@
-function allnumbers() {
-  for (let i = 0; i <= 999; i++) {
-    if (String(i).length === 1) {
-      console.log("00" + i);
-    }
-    if (String(i).length === 2) {
-      console.log("0" + i);
-    }
-    if (String(i).length === 3) {
-      console.log(String(i));
-    }
-  }
+function introduction(name, age, colour) {
+  console.log("Hello my name is " + name);
+  console.log(`Hello my name is ${name}`);
+  console.log("J'ai " + age + " ans");
+  console.log("Ma couleur preferee est " + colour);
 }
-console.log(allnumbers());
+
+introduction("Marion", 25, "purple");
+// Hello my name is Marion
+// J'ai 25 ans
+// Ma couleur preferee est purple
+
+introduction("Mathieu", 27, "green");
+// Hello my name is Mathieu
+// J'ai 27 ans
+// Ma couleur preferee est green

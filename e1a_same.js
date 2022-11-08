@@ -1,11 +1,11 @@
 function isSameNumber(x, y) {
   if (x.length !== y.length) {
-    return false;
+    return "Non";
   }
   if (x.split("").sort().join("") === y.split("").sort().join("")) {
-    return true;
+    return "Oui";
   }
-  return false;
+  return "Non";
 }
 
 console.log(isSameNumber("213", "321"));

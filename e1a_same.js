@@ -1,3 +1,5 @@
+let args = process.argv.slice(2);
+
 function isSameNumber(x, y) {
   if (x.length !== y.length) {
     return "Non";
@@ -8,7 +10,7 @@ function isSameNumber(x, y) {
   return "Non";
 }
 
-console.log(isSameNumber("213", "321"));
+console.log(isSameNumber(args[0], args[1]));
 
 // function isSameNumber(x, y) {
 //   if (x.length !== y.length) {

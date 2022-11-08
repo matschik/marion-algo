@@ -13,4 +13,22 @@ function allNumbers() {
   }
   return arrNb;
 }
-console.log(allNumbers());
+let allNb = allNumbers();
+
+function isDuplicated(x) {
+  let xSorted = x.split("").sort();
+  for (i = 1; i < xSorted.length; i++) {
+    if (xSorted[i - 1] === xSorted[i]) {
+      return "Oui";
+    }
+  }
+  return "Non";
+}
+
+function sortedNumbers(allNb) {
+  for (i = 1; i < allNb.length; i++) {
+    if (allNb[i - 1] === allNb[i]) {
+      return;
+    }
+  }
+}

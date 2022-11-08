@@ -1,3 +1,5 @@
+let args = process.argv.slice(2);
+
 function isDuplicated(x) {
   let xSorted = x.split("").sort();
   for (i = 1; i < xSorted.length; i++) {
@@ -7,4 +9,4 @@ function isDuplicated(x) {
   }
   return "Non";
 }
-console.log(isDuplicated("hey"));
+console.log(isDuplicated(args[0]));

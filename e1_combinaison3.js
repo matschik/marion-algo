@@ -1,34 +1,26 @@
-function allNumbers() {
+function add0() {
   let arrNb = [];
   for (let i = 0; i <= 999; i++) {
-    if (String(i).length === 1) {
-      arrNb.push("00" + i);
-    }
-    if (String(i).length === 2) {
-      arrNb.push("0" + i);
-    }
-    if (String(i).length === 3) {
-      arrNb.push(String(i));
-    }
+    let nb0 = 3 - String(i).length;
+    arrNb.push("0".repeat(nb0) + i);
   }
   return arrNb;
 }
-let allNb = allNumbers();
 
-function isDuplicated(x) {
-  let xSorted = x.split("").sort();
-  for (i = 1; i < xSorted.length; i++) {
-    if (xSorted[i - 1] === xSorted[i]) {
-      return "Oui";
-    }
-  }
-  return "Non";
-}
+let allNb = add0();
 
-function sortedNumbers(allNb) {
-  for (i = 1; i < allNb.length; i++) {
-    if (allNb[i - 1] === allNb[i]) {
-      return;
+let newArray = [];
+for (let i = 0; i < allNb.length; i++) {
+  let x = String(allNb[i]);
+  let arraySplit = x.split("");
+  for (let j = 1; j < arraySplit.length; j++) {
+    if (
+      arraySplit[j - 1] < arraySplit[j] &&
+      arraySplit[j] < arraySplit[j + 1]
+    ) {
+      newArray.push(String(arraySplit.join("")));
     }
   }
 }
+
+console.log(newArray.join(", "));

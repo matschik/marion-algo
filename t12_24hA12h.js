@@ -15,7 +15,7 @@ function format(n) {
     return n + ":" + splitArg[1] + "PM";
   }
   if (n < 12 && n !== 00) {
-    return n + ":" + splitArg[1] + "AM";
+    return "0" + n + ":" + splitArg[1] + "AM";
   }
 }
 console.log(format(n));

@@ -12,9 +12,11 @@
 // for (let i = 0; i < 26; i++) {
 //     console.log(String.fromCharCode(char + i ));
 // }
-
+let arr = [];
 let string = "a";
 let char = string.charCodeAt(0);
 for (let i = 0; i < 26; i++) {
-  console.log(String.fromCharCode(char + i));
+  let alphabet = String.fromCharCode(char + i);
+  arr.push(alphabet);
 }
+console.log(arr.join(""));
